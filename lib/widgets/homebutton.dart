@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class HomeButton extends StatelessWidget {
   final VoidCallback onPressed;
 
-  const HomeButton({super.key, required this.onPressed});
+  // ignore: avoid_types_as_parameter_names, non_constant_identifier_names
+  const HomeButton({Key? key, Key, required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
