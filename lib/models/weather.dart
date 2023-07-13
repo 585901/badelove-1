@@ -1,5 +1,6 @@
 class Weather {
-  final double temperature;
+  final double
+      temperature; //kode som sikrer at vi henter ut temp fra openweathermap.org
 
   Weather({required this.temperature});
 
