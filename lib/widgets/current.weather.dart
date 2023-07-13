@@ -1,6 +1,6 @@
 import 'dart:convert' show jsonDecode;
 
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as http; //hente ut http fra pubspec.yaml
 
 class CurrentWeather {
   final String cityName;

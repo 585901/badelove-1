@@ -30,14 +30,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  geocoding: ^2.1.0 #nødvendig for å legge inn adresse til badeplass knapper
 
   dio: ^5.2.1+1
-  http: ^1.1.0
+  http: ^1.1.0 #nødvendig for openweathermap.org sin api
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  google_maps_flutter: ^2.3.1
+  google_maps_flutter: ^2.3.1 #nødvendig for google maps kartet sin api
 
 dev_dependencies:
   flutter_test:
@@ -63,7 +64,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - lib/images/
+     - lib/images/    #gjør at vi kan hente alle images i lib
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

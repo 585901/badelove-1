@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//her er hjemknappen som jeg legger inn som widget i alle pages utenom homepage.dart
 class HomeButton extends StatelessWidget {
   final VoidCallback onPressed;
 
