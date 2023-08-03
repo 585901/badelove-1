@@ -100,6 +100,7 @@ class _GamlehaugenState extends State<Gamlehaugen> {
                     _buildBulletPoint('Stupebrett'),
                     _buildBulletPoint('Flytebrygge'),
                     _buildBulletPoint('Parkering ved Gamlehaugen'),
+                    _buildBulletPoint('test add')
                   ],
                 ),
               ),
