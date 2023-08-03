@@ -24,12 +24,11 @@ class Badeknapp extends StatelessWidget {
             color: Colors.blue,
             shape: BoxShape.circle,
           ),
-          child: Center(
-            child: Image.asset(
-              'lib/images/swimming.png', //her prøvde jeg å legge inn ikon i
-              width: 30, //google maps sin forhåndsdefinerte pin, men uten hell
-              height: 30,
+          child: const Center(
+            child: Icon(
+              Icons.pool,
               color: Colors.white,
+              size: 30,
             ),
           ),
         ),

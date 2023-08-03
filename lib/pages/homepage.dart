@@ -19,7 +19,7 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   final CurrentWeather currentWeather = CurrentWeather(
     cityName: 'Bergen',
-    apiKey: 'f5a86950619ef3046624e8687e9dbc6b',
+    apiKey: 'AIzaSyDTO7Uud1NU2czdUoD2xuBZeI3ylHzzwgU',
   );
 
   @override
@@ -50,7 +50,7 @@ class _HomepageState extends State<Homepage> {
                       return Text(
                         '$temperature °C',
                         style: const TextStyle(
-                          fontSize: 14,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Roboto',
                           color: Colors.black,
@@ -75,6 +75,8 @@ class _HomepageState extends State<Homepage> {
             //innsetting av locationPin i høyre hjørne
             top: 15,
             right: 10,
+            width: 55,
+            height: 55,
             child: LocationPin(
               onPressed: () {
                 Navigator.pushNamed(context, '/');

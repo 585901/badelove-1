@@ -6,7 +6,8 @@ import 'package:badelove/pages/badeplasser.dart';
 import 'package:badelove/pages/favoritter.dart';
 import 'package:badelove/pages/homepage.dart';
 import 'package:badelove/pages/profil.dart';
-import 'package:badelove/pages/vurdering.dart';
+import 'package:badelove/pages/vurdering.dart'; 
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -62,10 +63,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               SizedBox(
-                                height: 30,
+                                height: 45,
                                 child: Image.asset('lib/images/swimming.png',
                                     color: const Color.fromARGB(
-                                        255, 138, 138, 244)),
+                                        255, 133, 151, 255)),
                               ),
                             ])),
                     MaterialButton(
@@ -80,11 +81,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               SizedBox(
-                                height: 30,
+                                height: 40,
                                 child: Image.asset(
                                     'lib/images/filled.heart.png',
                                     color: const Color.fromARGB(
-                                        255, 138, 138, 244)),
+                                        255, 133, 151, 255)),
                               ),
                             ])),
                     MaterialButton(
@@ -99,10 +100,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               SizedBox(
-                                height: 25,
+                                height: 33,
                                 child: Image.asset('lib/images/pen.png',
                                     color: const Color.fromARGB(
-                                        255, 138, 138, 244)),
+                                        255, 133, 151, 255)),
                               ),
                             ])),
                     MaterialButton(
@@ -117,10 +118,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               SizedBox(
-                                height: 25,
+                                height: 35,
                                 child: Image.asset('lib/images/ladder.png',
                                     color: const Color.fromARGB(
-                                        255, 138, 138, 244)),
+                                        255, 133, 151, 255)),
                               ),
                             ])),
                     MaterialButton(
@@ -135,10 +136,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               SizedBox(
-                                height: 25,
+                                height: 35,
                                 child: Image.asset('lib/images/user.png',
                                     color: const Color.fromARGB(
-                                        255, 138, 138, 244)),
+                                        255, 133, 151, 255)),
                               ),
                             ]))
                   ],

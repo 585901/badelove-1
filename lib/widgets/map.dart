@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geocoding/geocoding.dart'; //for å skrive adresse til lokasjonen
+import 'package:geocoding/geocoding.dart';
+
+import '../beskrivelser/nordnes_sjobad.dart'; //for å skrive adresse til lokasjonen
 
 class MapWidget extends StatefulWidget {
   const MapWidget({Key? key}) : super(key: key);

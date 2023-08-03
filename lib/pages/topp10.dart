@@ -1,7 +1,14 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:badelove/beskrivelser/gamlehaugen.dart';
+import 'package:badelove/beskrivelser/helleneset.dart';
+import 'package:badelove/beskrivelser/marineholmen_sandstrand.dart';
+import 'package:badelove/beskrivelser/sandviken_sjobad.dart';
+import 'package:badelove/beskrivelser/sydnes_sjobad.dart';
 import 'package:flutter/material.dart';
 import 'package:badelove/widgets/homebutton.dart';
+
+import '../beskrivelser/nordnes_sjobad.dart';
 
 class Topp10 extends StatefulWidget {
   const Topp10({Key? key}) : super(key: key);
@@ -17,24 +24,24 @@ class _Topp10State extends State<Topp10> {
     '3. Marineholmen',
     '4. Sydnes sjøbad',
     '5. Gamlehaugen',
-    '6. Badeplass',
+    '6. Sandviken sjøbad',
     '7. Badeplass',
     '8. Badeplass',
     '9. Badeplass',
-    '10.Badeplass',
+    '10. Badeplass',
   ];
 
   List<int> starRatings = [
     5,
     5,
+    5,
+    4,
     4,
     4,
     3,
     3,
     2,
-    2,
-    2,
-    1
+    2
   ]; //legg inn ønsket stjernerating
 
   @override
@@ -47,7 +54,7 @@ class _Topp10State extends State<Topp10> {
         title: const Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            'Topp 10',
+            'TOPP 10',
             style: TextStyle(
               fontSize: 30,
               fontFamily: 'Roboto',
@@ -69,25 +76,72 @@ class _Topp10State extends State<Topp10> {
           child: ListView.builder(
             itemCount: badeplasser.length,
             itemBuilder: (BuildContext context, int index) {
-              return Column(
-                children: [
-                  ListTile(
-                    title: Text(
-                      badeplasser[index],
-                      style: const TextStyle(fontSize: 30),
-                    ),
-                    subtitle: Row(
-                      children: List.generate(
-                        starRatings[index],
-                        (starIndex) => const Icon(
-                          Icons.star,
-                          color: Color.fromARGB(255, 115, 92, 152),
+              return GestureDetector(
+                onTap: () {
+                  if (badeplasser[index] == '1. Helleneset') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Helleneset(),
+                      ),
+                    );
+                  } else if (badeplasser[index] == '2. Nordnes sjøbad') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NordnesSjobad(),
+                      ),
+                    );
+                  } else if (badeplasser[index] == '3. Marineholmen') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MarineholmenSandstrand(),
+                      ),
+                    );
+                  } else if (badeplasser[index] == '3. Sydnes Sjøbad') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SydnesSjobad(),
+                      ),
+                    );
+                  } else if (badeplasser[index] == '5. Gamlehaugen') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Gamlehaugen(),
+                      ),
+                    );
+                  } else if (badeplasser[index] == '6. Sandviken sjøbad') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SandvikenSjobad(),
+                      ),
+                    );
+                  }
+                },
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: Text(
+                        badeplasser[index],
+                        style: const TextStyle(fontSize: 30),
+                      ),
+                      subtitle: Row(
+                        children: List.generate(
+                          starRatings[index],
+                          (starIndex) => const Icon(
+                            Icons.star,
+                            color: Color.fromARGB(255, 94, 100, 150),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 35), // Økt avstand mellom ratingene
-                ],
+                    const SizedBox(height: 35),
+                  ],
+                ),
               );
             },
           ),

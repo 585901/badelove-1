@@ -9,12 +9,18 @@ class HomeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-        icon: Image.asset('lib/images/home.png',
-            color: const Color.fromARGB(255, 138, 138, 244)),
+    return SizedBox(
+      height: 50,
+      width: 50,
+      child: IconButton(
+        icon: Image.asset(
+          'lib/images/home.png',
+          color: const Color.fromARGB(255, 133, 151, 255),
+        ),
         onPressed: () {
-          Navigator.pushNamed(context,
-              '/'); //"/" brukes til å fjerne ruter fra stabelen til den når hjemmesiden
-        });
+          Navigator.pushNamed(context, '/');
+        },
+      ),
+    );
   }
 }
