@@ -6,6 +6,8 @@ import 'package:badelove/beskrivelser/marineholmen_sandstrand.dart';
 import 'package:badelove/beskrivelser/nordnes_sjobad.dart';
 import 'package:badelove/beskrivelser/sandviken_sjobad.dart';
 import 'package:badelove/beskrivelser/sydnes_sjobad.dart';
+import 'package:badelove/models/beskrivelse.dart';
+import 'package:badelove/pages/dyn_beskrivelser/dynamicPage.dart';
 import 'package:flutter/material.dart';
 import 'package:badelove/widgets/homebutton.dart';
 
@@ -52,7 +54,8 @@ class _FavoritterState extends State<Favoritter> {
                 //lager en kobling mellom bildet på Favorittsiden og Hellenesetsiden
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const Helleneset(),
+                    //change happended here !
+                    builder: (context) => const DynamicPage(),
                   ),
                 );
               },
