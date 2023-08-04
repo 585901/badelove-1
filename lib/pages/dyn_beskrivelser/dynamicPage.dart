@@ -93,8 +93,8 @@ class _DynamicPageState extends State<DynamicPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    //legger til punktlisten
-                    _buildBulletPoint(beskrivelse.bulletpoints),
+                    for (var text in beskrivelse.bulletpoints)
+                      _buildBulletPoint(text)
                   ],
                 ),
               ),
@@ -105,7 +105,10 @@ class _DynamicPageState extends State<DynamicPage> {
                   GestureDetector(
                     //linker buss-ikon til skyss
                     onTap: () async {
-                      const url = 'https://www.skyss.no/';
+                      //beskrivelse.skyss
+                      var url =
+                          'https://reise.skyss.no/planner/travel-plans?${beskrivelse.skyss}';
+                      //const url = 'https://www.skyss.no/';
                       if (await canLaunch(url)) {
                         await launch(url);
                       }
@@ -126,7 +129,8 @@ class _DynamicPageState extends State<DynamicPage> {
                   GestureDetector(
                     //linker bil-ikon til google maps med gamlehaugen som destinasjon
                     onTap: () async {
-                      const url = 'https://www.google.com/maps/place/';
+                      var url =
+                          'https://www.google.com/maps/place/${beskrivelse.gmaps}';
                       if (await canLaunch(url)) {
                         await launch(url);
                       }
@@ -147,7 +151,8 @@ class _DynamicPageState extends State<DynamicPage> {
                   GestureDetector(
                     //linker P-ikon til parkering i nærheten av badeplass
                     onTap: () async {
-                      const url = 'https://www.google.com/maps/place/';
+                      var url =
+                          'https://www.google.com/maps/search/${beskrivelse.gparking}';
                       if (await canLaunch(url)) {
                         await launch(url);
                       }
