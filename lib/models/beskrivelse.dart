@@ -39,6 +39,7 @@ class Beskrivelse {
       String? gmaps,
       String? gparking,
       bool? favoritt}) {
+        
     return Beskrivelse(
         pageTitle: pageTitle ?? this.pageTitle,
         rating: rating ?? this.rating,

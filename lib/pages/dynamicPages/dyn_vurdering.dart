@@ -27,7 +27,7 @@ class _DynVurderingState extends State<DynVurdering> {
         ),
         iconTheme:
             const IconThemeData(color: Color.fromARGB(255, 94, 100, 150)),
-        automaticallyImplyLeading: true,
+        automaticallyImplyLeading: false,
         actions: [
           HomeButton(
             onPressed: () {

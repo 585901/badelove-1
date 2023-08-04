@@ -48,7 +48,7 @@ class _Dyn_favoritterState extends State<Dyn_favoritter> {
               children: [
                 GestureDetector(
                   onTap: () {
-                    //lager en kobling mellom bildet på Favorittsiden og Hellenesetsiden
+                    //lager en kobling mellom bildet på Favorittsiden og badeplassen
                     Navigator.of(context).push(
                       MaterialPageRoute(
                           //change happended here !

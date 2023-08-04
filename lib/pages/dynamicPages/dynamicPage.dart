@@ -156,7 +156,7 @@ class _DynamicPageState extends State<DynamicPage> {
                     //linker P-ikon til parkering i nærheten av badeplass
                     onTap: () async {
                       var url =
-                          'https://www.google.com/maps/search/${beskrivelse.gparking}';
+                          'https://www.google.com/maps/place/${beskrivelse.gparking}';
                       if (await canLaunch(url)) {
                         await launch(url);
                       }
