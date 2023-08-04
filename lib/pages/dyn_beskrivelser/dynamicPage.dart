@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DynamicPage extends StatefulWidget {
-  const DynamicPage({Key? key}) : super(key: key);
+  //final Beskrivelse beskrivelse;
+  //const DynamicPage({super.key, required this.beskrivelse});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -13,10 +14,11 @@ class DynamicPage extends StatefulWidget {
 }
 
 class _DynamicPageState extends State<DynamicPage> {
-  final Beskrivelse beskrivelse = BeskrivelseList.list[0];
-
   @override
   Widget build(BuildContext context) {
+    final beskrivelse =
+        ModalRoute.of(context)!.settings.arguments as Beskrivelse;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -61,12 +63,14 @@ class _DynamicPageState extends State<DynamicPage> {
                       Colors.red,
                       BlendMode.srcIn,
                     ),
-                    child: Image.asset(
+                    child: HeartButton()
+                    /* Image.asset(
                       //legger til hjertet
                       'lib/images/heart.png',
                       height: 30,
                       width: 30,
-                    ),
+                    ) */
+                    ,
                   ),
                 ],
               ),
@@ -206,4 +210,31 @@ Widget _buildBulletPoint(String text) {
       ),
     ],
   );
+}
+
+class HeartButton extends StatefulWidget {
+  @override
+  _HeartButtonState createState() => _HeartButtonState();
+}
+
+class _HeartButtonState extends State<HeartButton> {
+  bool _isFilled = false;
+
+  void _toggleHeart() {
+    setState(() {
+      _isFilled = !_isFilled;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: IconButton(
+        icon: _isFilled ? Icon(Icons.favorite) : Icon(Icons.favorite_border),
+        color: Colors.red,
+        iconSize: 35.0,
+        onPressed: _toggleHeart,
+      ),
+    );
+  }
 }

@@ -5,6 +5,7 @@ import 'package:badelove/beskrivelser/helleneset.dart';
 import 'package:badelove/beskrivelser/marineholmen_sandstrand.dart';
 import 'package:badelove/beskrivelser/sandviken_sjobad.dart';
 import 'package:badelove/beskrivelser/sydnes_sjobad.dart';
+import 'package:badelove/utils/beskrivelse_list.dart';
 import 'package:flutter/material.dart';
 import 'package:badelove/widgets/homebutton.dart';
 
@@ -18,6 +19,7 @@ class Topp10 extends StatefulWidget {
 }
 
 class _Topp10State extends State<Topp10> {
+  final pageList = BeskrivelseList.list;
   List<String> badeplasser = [
     '1. Helleneset',
     '2. Nordnes sjøbad',
@@ -32,7 +34,7 @@ class _Topp10State extends State<Topp10> {
   ];
 
   List<int> starRatings = [
-    5,
+    1,
     5,
     5,
     4,
@@ -74,10 +76,15 @@ class _Topp10State extends State<Topp10> {
         child: Align(
           alignment: Alignment.center,
           child: ListView.builder(
-            itemCount: badeplasser.length,
-            itemBuilder: (BuildContext context, int index) {
+            itemCount: pageList.length,
+            itemBuilder: (context, int index) {
               return GestureDetector(
                 onTap: () {
+                  // Navigator.of(context).push(
+                  // MaterialPageRoute(
+                  // builde: (context) => DynamicPage(), settings: RouteSettings(argument:pageList[index])
+                  // ),
+                  // );
                   if (badeplasser[index] == '1. Helleneset') {
                     Navigator.push(
                       context,

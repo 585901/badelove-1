@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:badelove/pages/dyn_favoritter.dart';
+import 'package:badelove/pages/dyn_top10.dart';
 import 'package:badelove/pages/topp10.dart';
 import 'package:flutter/material.dart';
 import 'package:badelove/pages/badeplasser.dart';
@@ -55,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: () {
                           setState(() {
                             currentScreen =
-                                const Topp10(); //sikrer at topp10.dart er skjermen som vises ved trykk på knappen
+                                const DynamicTopp10(); //sikrer at topp10.dart er skjermen som vises ved trykk på knappen
                             currentTab = 0;
                           });
                         },

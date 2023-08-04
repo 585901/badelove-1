@@ -54,8 +54,15 @@ class _Dyn_favoritterState extends State<Dyn_favoritter> {
             return Column(
               children: [
                 GestureDetector(
-                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const DynamicPage())),
+                  onTap: () {
+                    //lager en kobling mellom bildet på Favorittsiden og Hellenesetsiden
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        //change happended here !
+                        builder: (context) => DynamicPage(), settings: RouteSettings(arguments: pageList[index])
+                      ),
+                    );
+                  },
                   child: Image.asset(
                     // legger til bilde
                     pageList[index].imagePath,
