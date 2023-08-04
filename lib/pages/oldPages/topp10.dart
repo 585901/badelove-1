@@ -8,8 +8,7 @@ import 'package:badelove/beskrivelser/sydnes_sjobad.dart';
 import 'package:badelove/utils/beskrivelse_list.dart';
 import 'package:flutter/material.dart';
 import 'package:badelove/widgets/homebutton.dart';
-
-import '../beskrivelser/nordnes_sjobad.dart';
+import '../../beskrivelser/nordnes_sjobad.dart';
 
 class Topp10 extends StatefulWidget {
   const Topp10({Key? key}) : super(key: key);

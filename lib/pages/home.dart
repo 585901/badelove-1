@@ -1,15 +1,18 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:badelove/pages/dyn_badeplasser.dart';
-import 'package:badelove/pages/dyn_favoritter.dart';
-import 'package:badelove/pages/dyn_top10.dart';
-import 'package:badelove/pages/topp10.dart';
+import 'package:badelove/pages/dynamicPages/dyn_vurdering.dart';
+
 import 'package:flutter/material.dart';
-import 'package:badelove/pages/badeplasser.dart';
-import 'package:badelove/pages/favoritter.dart';
+import 'package:badelove/pages/oldPages/badeplasser.dart';
+import 'package:badelove/pages/oldPages/favoritter.dart';
 import 'package:badelove/pages/homepage.dart';
 import 'package:badelove/pages/profil.dart';
-import 'package:badelove/pages/vurdering.dart';
+
+import 'dynamicPages/dyn_badeplasser.dart';
+import 'dynamicPages/dyn_favoritter.dart';
+import 'dynamicPages/dyn_top10.dart';
+import 'oldPages/topp10.dart';
+import 'oldPages/vurdering.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -95,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         minWidth: 80,
                         onPressed: () {
                           setState(() {
-                            currentScreen = const Vurdering();
+                            currentScreen = DynVurdering();
                             currentTab = 2;
                           });
                         },

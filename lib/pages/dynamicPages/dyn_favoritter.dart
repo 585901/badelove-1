@@ -1,18 +1,18 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'package:badelove/pages/dyn_beskrivelser/dynamicPage.dart';
+import 'package:badelove/pages/dynamicPages/dynamicPage.dart';
 import 'package:badelove/utils/beskrivelse_list.dart';
 import 'package:flutter/material.dart';
 import 'package:badelove/widgets/homebutton.dart';
 
-class Dyn_badeplasser extends StatefulWidget {
-  const Dyn_badeplasser({super.key});
+class Dyn_favoritter extends StatefulWidget {
+  const Dyn_favoritter({super.key});
 
   @override
-  _Dyn_badeplasserState createState() => _Dyn_badeplasserState();
+  _Dyn_favoritterState createState() => _Dyn_favoritterState();
 }
 
-class _Dyn_badeplasserState extends State<Dyn_badeplasser> {
+class _Dyn_favoritterState extends State<Dyn_favoritter> {
   //final Beskrivelse beskrivelse = BeskrivelseList.list[0];
   final pageList = BeskrivelseList.list;
 
@@ -26,7 +26,7 @@ class _Dyn_badeplasserState extends State<Dyn_badeplasser> {
         title: const Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            'BADEPLASSER',
+            'FAVORITTER',
             style: TextStyle(
               fontSize: 30,
               fontFamily: 'Roboto',
@@ -48,7 +48,7 @@ class _Dyn_badeplasserState extends State<Dyn_badeplasser> {
               children: [
                 GestureDetector(
                   onTap: () {
-                    //lager en kobling mellom bildet på Favorittsiden og badeplassen
+                    //lager en kobling mellom bildet på Favorittsiden og Hellenesetsiden
                     Navigator.of(context).push(
                       MaterialPageRoute(
                           //change happended here !

@@ -2,7 +2,7 @@
 import 'package:badelove/utils/beskrivelse_list.dart';
 import 'package:flutter/material.dart';
 import 'package:badelove/widgets/homebutton.dart';
-import 'dyn_beskrivelser/dynamicPage.dart';
+import 'dynamicPage.dart';
 
 class DynamicTopp10 extends StatefulWidget {
   const DynamicTopp10({Key? key}) : super(key: key);
