@@ -1,5 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:badelove/pages/dyn_badeplasser.dart';
 import 'package:badelove/pages/dyn_favoritter.dart';
 import 'package:badelove/pages/dyn_top10.dart';
 import 'package:badelove/pages/topp10.dart';
@@ -112,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         minWidth: 80,
                         onPressed: () {
                           setState(() {
-                            currentScreen = const Badeplasser();
+                            currentScreen = const Dyn_badeplasser();
                             currentTab = 3;
                           });
                         },
