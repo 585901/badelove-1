@@ -44,7 +44,7 @@ class BeskrivelseList {
     Beskrivelse(
         imagePath: 'lib/images/marineholmen.png',
         pageTitle: 'Marineholmen Sandstrand',
-        rating: 1,
+        rating: 4,
         description:
             'Marineholmen Sandstrand er en menneskapt sandstrand som passer til småbarnsfamilier så vel som studentene i området.',
         bulletpoints: ["Bord og benker", "Stupebrett", "Rullestolvennlig"],
@@ -58,7 +58,7 @@ class BeskrivelseList {
     Beskrivelse(
         imagePath: 'lib/images/nordnessjobad.png',
         pageTitle: 'Nordnes Sjøbad',
-        rating: 1,
+        rating: 4,
         description:
             'Nordnes Sjøbad ligger i Nordnesparken, kun et steinkast unna Akvariet og gangavstand til Bergen sentrum. Her er det et utendørs oppvarmet saltvannsbaseng på 25 meter som holder herlige 30 grader.',
         bulletpoints: [
@@ -79,7 +79,7 @@ class BeskrivelseList {
     Beskrivelse(
         imagePath: 'lib/images/sandvikensjobad.png',
         pageTitle: 'Sandviken Sjøbad',
-        rating: 1,
+        rating: 3,
         description:
             'Sandviken sjøbad ligger ved Elsero, like ved Gamle Bergen Museum. På dette sjøbadet kan du beytte deg av både badestrand og brygge. Det er også en plen, samt en grillplass.',
         bulletpoints: [
@@ -102,7 +102,7 @@ class BeskrivelseList {
     Beskrivelse(
         imagePath: 'lib/images/sydnessjobad.png',
         pageTitle: 'Sydnes Sjøbad',
-        rating: 1,
+        rating: 3,
         description:
             'Sydnes Sjøbad ligger ved Hurtigruteterminalen i Jekteviken med gangavstand fra Torgalmenningen og sentrum. Her er det mulighet for å bruke både brygge og badestiger.',
         bulletpoints: ["Brygge", "Badestige"],
